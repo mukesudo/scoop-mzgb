@@ -1,0 +1,22 @@
+{
+    "version": "0.1.1",
+    "description": "Fast CLI for filtering very large log files by level, pattern, and time range",
+    "homepage": "https://github.com/mukesudo/mzgb",
+    "license": "MIT",
+    "depends": "python",
+    "installer": {
+        "script": "python -m pip install mzgb==0.1.1 --quiet"
+    },
+    "uninstaller": {
+        "script": "python -m pip uninstall mzgb -y --quiet"
+    },
+    "checkver": {
+        "url": "https://pypi.org/pypi/mzgb/json",
+        "jsonpath": "$.info.version"
+    },
+    "autoupdate": {
+        "installer": {
+            "script": "python -m pip install mzgb==$version --quiet"
+        }
+    }
+}
